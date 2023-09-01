@@ -8,11 +8,22 @@ allCategories();
 
 const handleBtn = (data) => {
   const btnContainer = document.getElementById("btn-container");
-  console.log(data);
   data.forEach((category) => {
-    console.log(category);
     const div = document.createElement("div");
-    div.innerHTML = `<button class="btn btn-error">${category.category}</button>`;
+    div.innerHTML = `<button class="btn btn-active">${category.category}</button>`;
     btnContainer.appendChild(div);
   });
 };
+
+const loadData = () => {
+  fetch("https://openapi.programming-hero.com/api/videos/category/1000")
+    .then((res) => res.json())
+    .then((data) => setCard(data.data));
+};
+
+const setCard = (data) => {
+  console.log(data);
+  
+};
+
+loadData();
