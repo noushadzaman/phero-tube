@@ -31,7 +31,7 @@ const setCard = (data) => {
     cardContainer.innerHTML = "";
     cardContainer.innerHTML = `
       <div class="h-[70vh] text-center flex flex-col items-center justify-center">
-      <img src="./Icon.png" />
+      <img src="./image/Icon.png" />
       <h1 class="text-[32px]">Oops!! Sorry, There is no content here</h1>  
       </div>
       `;
@@ -51,7 +51,7 @@ const setCard = (data) => {
       singleData.thumbnail
     } alt="Shoes" />
     <p class="px-[6px] bg-[#171717] text-[#fff] bottom-[12px] right-[12px] rounded absolute">${
-      hour ? hour + "hrs " + time.slice(2, 4) + "min" : []
+      hour ? hour + "hrs " + time.slice(2, 4) + "min ago" : []
     }</p>
     </figure>
     <div class="card-body">
@@ -68,7 +68,7 @@ const setCard = (data) => {
       singleData.authors[0].profile_name
     }</h2><span>${
         singleData.authors[0].verified
-          ? '<img src="./fi_10629607.svg">'
+          ? '<img src="./image/fi_10629607.svg">'
           : "<img/>"
       } </span>
     </div>
