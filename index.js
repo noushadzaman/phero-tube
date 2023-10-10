@@ -23,7 +23,6 @@ const loadData = (id) => {
 };
 
 const setCard = (data) => {
-  console.log(data);
 
   if (data.length == 0) {
     const cardContainer = document.getElementById("card-container");
@@ -91,7 +90,8 @@ const sortBtn = document
   .getElementById("sort-btn")
   .addEventListener("click", function () {
     const sorted = array.sort(
-      (a, b) => parseInt(a.others.views) - parseInt(b.others.views)
+      (a, b) => parseInt(b.others.views) - parseInt(a.others.views)
     );
+    console.log(sorted);
     setCard(sorted);
   });
